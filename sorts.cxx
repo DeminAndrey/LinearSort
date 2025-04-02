@@ -74,7 +74,6 @@ void sorts::bucketSort(vector<int>& values) {
   // Распределение элементов массива по блокам
   for (size_t i = 0; i < n; ++i) {
     size_t idx = static_cast<size_t>((values[i] - minVal) / intervalSize);
-    if (idx == n) --idx;  // Корректировка индекса для крайнего случая
     buckets[idx].push_back(values[i]);
   }
 
